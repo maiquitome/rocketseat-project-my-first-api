@@ -7,11 +7,12 @@ namespace MyFirstApi.Controllers;
 public class UserController : ControllerBase
 {
     [HttpGet]
-    [ProducesResponseType(typeof(Response), StatusCodes.Status200OK)]
+    [Route("{id}/{nickname}")]
+    [ProducesResponseType(typeof(User), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(string), StatusCodes.Status400BadRequest)]
-    public IActionResult Get()
+    public IActionResult Get(int id, string nickname)
     {
-        var response = new Response
+        var response = new User
         {
             Name = "John Doe",
             Age = 30
