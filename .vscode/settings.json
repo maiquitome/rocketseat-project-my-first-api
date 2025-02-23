@@ -1,3 +1,7 @@
 {
-    "dotnet.defaultSolution": "MyFirstApi.sln"
+    "dotnet.defaultSolution": "MyFirstApi.sln",
+    "files.exclude": {
+        "**/bin": true,
+        "**/obj": true,
+    }
 }
