@@ -46,4 +46,12 @@ public class UserController : ControllerBase
     {
         return NoContent();
     }
+
+    [HttpDelete]
+    // [Route("{id}")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    public IActionResult Delete(/* [FromRoute] int id */)
+    {
+        return NoContent();
+    }
 }
