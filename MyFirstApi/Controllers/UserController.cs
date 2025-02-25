@@ -40,6 +40,7 @@ public class UserController : ControllerBase
     }
 
     [HttpPut]
+    [Route("{id}")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     public IActionResult Update([FromRoute] int id, [FromBody] RequestUpdateUserProfileJson request)
     {
