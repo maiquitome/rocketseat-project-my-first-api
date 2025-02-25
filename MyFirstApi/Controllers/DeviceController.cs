@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using MyFirstApi.Entities;
 
 namespace MyFirstApi.Controllers;
 
@@ -8,6 +9,13 @@ public class DeviceController : MyFirstApiBaseController
     public ActionResult Get()
     {
         // Author = "maria";
+
+        var laptop = new Laptop();
+
+        // Com o modificador `protected` na classe `Device`, o método `isConnected` só pode ser usado na própria classe ou classes filhas
+        // laptop.isConnected = true;
+
+        string model = laptop.GetModel();
 
         return Ok(Author);
     }
