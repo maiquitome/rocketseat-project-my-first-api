@@ -63,6 +63,8 @@ public class UserController : MyFirstApiBaseController
             new() {Id = 2, Age = 62, Name = "maria"}
         };
 
+        string key = GetCustomKey();
+
         return Ok(response);
     }
 

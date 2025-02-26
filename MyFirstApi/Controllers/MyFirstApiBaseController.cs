@@ -7,4 +7,9 @@ namespace MyFirstApi.Controllers;
 public class MyFirstApiBaseController : ControllerBase
 {
     public string Author { get; set; } = "Maiqui Tomé";
+
+    protected string GetCustomKey()
+    {
+        return Request.Headers["MyKey"].ToString();
+    }
 }

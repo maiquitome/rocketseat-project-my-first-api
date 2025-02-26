@@ -24,6 +24,8 @@ public class DeviceController : MyFirstApiBaseController
 
         string brand = laptop.GetBrand();
 
-        return Ok(hello);
+        string key = GetCustomKey();
+
+        return Ok(key);
     }
 }
