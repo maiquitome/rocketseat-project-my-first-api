@@ -6,6 +6,8 @@ public class Laptop : Device
 
     public override string GetBrand() => "Apple";
 
+    public override string Hello() => $"{base.Hello()} Apple!";
+
     public string GetModel()
     {
         bool isConnected = IsConnected();

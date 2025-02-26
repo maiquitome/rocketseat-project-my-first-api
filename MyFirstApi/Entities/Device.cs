@@ -13,4 +13,6 @@ public abstract class Device
     {
         var x = IsConnected();
     }
+
+    public virtual string Hello() => "Hello";
 }
