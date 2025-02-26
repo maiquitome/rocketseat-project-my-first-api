@@ -10,12 +10,17 @@ public class DeviceController : MyFirstApiBaseController
     {
         // Author = "maria";
 
+        // var device = new Device();
+
+
         var laptop = new Laptop();
 
         // Com o modificador `protected` na classe `Device`, o método `isConnected` só pode ser usado na própria classe ou classes filhas
         // laptop.isConnected = true;
 
         string model = laptop.GetModel();
+
+        string brand = laptop.GetBrand();
 
         return Ok(Author);
     }

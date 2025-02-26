@@ -1,9 +1,13 @@
 
 namespace MyFirstApi.Entities;
 
-public class Device
+public abstract class Device
 {
+    public abstract string SerialNumber { get; }
+
     protected bool IsConnected() => false;
+
+    public abstract string GetBrand(); // força todas as classes filhas a implementarem
 
     public void Test()
     {
