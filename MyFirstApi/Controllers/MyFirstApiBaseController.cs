@@ -4,9 +4,15 @@ namespace MyFirstApi.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class MyFirstApiBaseController : ControllerBase
+public abstract class MyFirstApiBaseController : ControllerBase
 {
     public string Author { get; set; } = "Maiqui Tomé";
+
+    [HttpGet("healthy")]
+    public IActionResult Healthy()
+    {
+        return Ok("It's working!");
+    }
 
     protected string GetCustomKey()
     {
